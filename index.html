@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schnly · EU Compliance &amp; Tax Engine</title>
+  
+  <!-- SEO & Primary Meta -->
+  <meta name="title" content="Schnly · EU Compliance &amp; Tax Engine" />
+  <meta name="description" content="Real-time Schengen rolling window calculation, EES biometric tracking, and 183-day domestic physical presence monitoring in one unified dashboard—launching soon." />
+  <meta name="theme-color" content="#F8FAFC" />
+  <link rel="canonical" href="https://schnly.com/" />
+
+  <!-- Open Graph / LinkedIn / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schnly.com/" />
+  <meta property="og:title" content="Schnly · Master the 90/180 Rule. Protect Your Tax Residency." />
+  <meta property="og:description" content="Real-time Schengen rolling window calculation, EES biometric tracking, and 183-day domestic physical presence monitoring in one unified dashboard." />
+  <meta property="og:image" content="https://schnly.com/og-preview.png" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://schnly.com/" />
+  <meta name="twitter:title" content="Schnly · Master the 90/180 Rule. Protect Your Tax Residency." />
+  <meta name="twitter:description" content="Real-time Schengen rolling window calculation, EES biometric tracking, and 183-day physical presence monitoring." />
+  <meta name="twitter:image" content="https://schnly.com/og-preview.png" />
+
+  <style>
+    :root {
+      --blue: #0051FF;
+      --navy: #0F1729;
+      --slate: #5D6E89;
+      --pale-grey: #F8FAFC;
+      --white: #FFFFFF;
+      --light-grey: #E1E7EF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--pale-grey);
+      color: var(--navy);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 620px;
+      width: 100%;
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+      border-radius: 20px;
+      padding: 48px 36px;
+      text-align: center;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 41, 0.05), 0 8px 10px -6px rgba(15, 23, 41, 0.03);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--blue);
+      background: rgba(0, 81, 255, 0.06);
+      border: 1px solid rgba(0, 81, 255, 0.16);
+      padding: 5px 14px;
+      border-radius: 9999px;
+      margin-bottom: 20px;
+    }
+
+    .brand {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .brand span {
+      color: var(--blue);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--navy);
+    }
+
+    h1 span {
+      color: var(--blue);
+    }
+
+    p {
+      color: var(--slate);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .tags-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .tag {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: var(--pale-grey);
+      border: 1px solid var(--light-grey);
+      color: var(--slate);
+      padding: 6px 14px;
+      border-radius: 8px;
+    }
+
+    /* Waitlist Inline Form */
+    .waitlist-form {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .waitlist-form input {
+      flex: 1;
+      padding: 13px 16px;
+      border: 1px solid var(--light-grey);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      color: var(--navy);
+      background: var(--white);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .waitlist-form input::placeholder {
+      color: #94a3b8;
+    }
+
+    .waitlist-form input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(0, 81, 255, 0.12);
+    }
+
+    .waitlist-form button {
+      background: var(--blue);
+      color: var(--white);
+      border: none;
+      padding: 13px 22px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(0, 81, 255, 0.22);
+    }
+
+    .waitlist-form button:hover {
+      background: #0045d8;
+      box-shadow: 0 6px 16px rgba(0, 81, 255, 0.28);
+      transform: translateY(-1px);
+    }
+
+    .waitlist-form button:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .form-msg {
+      font-size: 0.85rem;
+      margin-bottom: 24px;
+      min-height: 20px;
+      display: none;
+    }
+
+    .form-msg.success {
+      display: block;
+      color: var(--blue);
+      font-weight: 600;
+    }
+
+    .form-msg.error {
+      display: block;
+      color: #dc2626;
+      font-weight: 500;
+    }
+
+    /* Social CTA Links */
+    .social-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: var(--pale-grey);
+      color: var(--navy);
+      border: 1px solid var(--light-grey);
+      transition: all 0.2s ease;
+    }
+
+    .social-link:hover {
+      background: #eff3f8;
+      border-color: #cbd5e1;
+      color: var(--blue);
+      transform: translateY(-1px);
+    }
+
+    footer {
+      font-size: 0.75rem;
+      color: var(--slate);
+      border-top: 1px solid var(--light-grey);
+      padding-top: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 32px 20px;
+      }
+      .brand {
+        font-size: 1.85rem;
+      }
+      h1 {
+        font-size: 1.25rem;
+      }
+      .waitlist-form {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="eyebrow">EU Compliance &amp; Tax Engine</div>
+    <div class="brand">Schnly<span>.</span></div>
+    
+    <h1>Master the <span>90/180 Rule</span>. Protect Your Tax Residency.</h1>
+    
+    <p>
+      Real-time Schengen rolling window calculation, EES biometric tracking, and 183-day domestic physical presence monitoring in one unified dashboard—launching soon.
+    </p>
+
+    <div class="tags-group">
+      <span class="tag">EES &amp; ETIAS Ready</span>
+      <span class="tag">Permit Exclusions</span>
+      <span class="tag">Inspector Mode</span>
+    </div>
+
+    <!-- Inline Email Capture -->
+    <form id="waitlist-form" class="waitlist-form">
+      <input 
+        type="email" 
+        id="email-input" 
+        placeholder="Enter your email for early access..." 
+        required 
+        autocomplete="email" 
+      />
+      <button type="submit" id="submit-btn">Get Early Access</button>
+    </form>
+    <div id="form-msg" class="form-msg"></div>
+
+    <!-- Corrected Social Links -->
+    <div class="social-group">
+      <a href="https://www.instagram.com/schnly_eu/" rel="noopener noreferrer" target="_blank" class="social-link">
+        Follow @schnly_eu on Instagram
+      </a>
+      <a href="https://www.linkedin.com/company/schnly-com/" rel="noopener noreferrer" target="_blank" class="social-link">
+        Follow Schnly on LinkedIn
+      </a>
+    </div>
+
+    <footer>
+      © 2026 schnly.com · Cross-Border Compliance &amp; Fiscal Telemetry
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const input = document.getElementById('email-input');
+    const btn = document.getElementById('submit-btn');
+    const msg = document.getElementById('form-msg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Submitting...';
+      msg.className = 'form-msg';
+      msg.textContent = '';
+
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          msg.className = 'form-msg success';
+          msg.textContent = 'You are on the list! We will be in touch shortly.';
+        } else {
+          throw new Error('Endpoint returned non-200');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Get Early Access';
+        msg.className = 'form-msg error';
+        msg.innerHTML = 'Unable to submit directly. Please send a note to <a href="mailto:admin@schnly.com?subject=Early%20Access%20Request&body=Please%20add%20' + encodeURIComponent(email) + '%20to%20the%20early%20access%20list." style="color: #0051FF; font-weight: 600;">admin@schnly.com</a>.';
+      }
+    });
+  </script>
+
+</body>
+</html>
